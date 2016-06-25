@@ -1,0 +1,14 @@
+<!-- search_words.erb -->
+<h1> Movie Lovers Quiz </h1>
+
+<h2> Which movie was released in <%= @years %> </h2>
+<% @movies.each do |m| %>
+  <% if m.year == @years %>
+  <img HEIGHT="430" WIDTH="300"  src="<%= m.poster %>" onClick="alert('correct')">
+  <% else %>
+  <img HEIGHT="430" WIDTH="300"  src="<%= m.poster %>" onClick="alert('incorrect')">
+<% end %>
+<% end %>
+
+
+
